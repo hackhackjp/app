@@ -12,6 +12,7 @@
 		<meta name="msapplication-TileColor" content="<?php echo get_theme_mod( 'main_color', '#6bb6ff');?>">
         <meta name="theme-color" content="<?php echo get_theme_mod( 'main_color', '#6bb6ff');?>">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<?php wp_head(); //削除禁止 ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -44,11 +45,11 @@
 						if(has_nav_menu('desktop-nav')) {
 							echo '<nav class="desktop-nav clearfix">';
 							wp_nav_menu(array(
-					         'container' => false, 
-					         'theme_location' => 'desktop-nav', 
+					         'container' => false,
+					         'theme_location' => 'desktop-nav',
     			             'depth' => 2,
     			             'fallback_cb' => ''
-							)); 
+							));
 							echo '</nav>';
 						  } //END PC用ヘッダーナビ ?>
 				</div>
@@ -56,11 +57,11 @@
 				  if(wp_is_mobile() && has_nav_menu('mobile-nav')) {
 				  	echo '<nav class="mobile-nav">';
 					wp_nav_menu(array(
-			         'container' => false, 
-			         'theme_location' => 'mobile-nav', 
+			         'container' => false,
+			         'theme_location' => 'mobile-nav',
 		             'depth' => 1,
-		             'fallback_cb' => ''			
-		             )); 
+		             'fallback_cb' => ''
+		             ));
 					echo '</nav>';
 				  	} //END モバイル用ナビ ?>
 			</header>
