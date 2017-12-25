@@ -6,3 +6,50 @@ Template:       sango-theme
 
 (optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
 */
+.pagination {
+	clear: both;
+	padding: 20px 0;
+	position: relative;
+	font-size: 14px;
+	line-height: 1em;
+        text-align: center;
+}
+.pagination-box {
+	display: inline-block;
+}
+.pagination span, .pagination a {
+	display: block;
+	float: left;
+	margin: 2px 2px 2px 0;
+	padding: 10px 14px 10px 14px;
+	text-decoration: none;
+	width: auto;
+	color: #fff;
+	background: #47BEA0;
+	border-radius: 50%;
+}
+.pagination span.page-of {
+	background: none;
+	color: #47BEA0;
+}
+.pagination a:hover{
+	color: #47BEA0;
+	background: #F9D635;
+}
+.pagination .current{
+	padding: 10px 14px 10px 14px;
+	background: #F9D635;
+	color: #47BEA0;
+}
+@media only screen and (max-width: 413px) {
+.pagination {
+	font-size: 12px;
+	line-height: 12px;
+}
+.pagination span, .pagination a {
+	padding: 7px 10px 7px 10px;
+}
+.pagination .current{
+	padding: 7px 10px 7px 10px;
+}
+}
