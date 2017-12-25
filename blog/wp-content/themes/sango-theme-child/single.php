@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div id="content"<?php column_class();?>>
+	<div id="content" class="one-column">
 		<div id="inner-content" class="wrap cf">
 			<main id="main" class="m-all t-2of3 d-5of7 cf">
 				<?php 

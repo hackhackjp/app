@@ -13,27 +13,25 @@
         <meta name="theme-color" content="<?php echo get_theme_mod( 'main_color', '#6bb6ff');?>">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<?php wp_head(); //削除禁止 ?>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({
-		    google_ad_client: "ca-pub-8389753842776165",
-		    enable_page_level_ads: true
-		  });
-		</script>
 	</head>
 	<body <?php body_class(); ?>>
 		<div id="container">
 			<header class="header<?php if(get_option('center_logo_checkbox')) echo ' header--center'; ?>">
-				<?php //ハンバーガーメニュー
-					if(wp_is_mobile() && is_active_sidebar( 'nav_drawer' )): ?>
+				<?php //ハンバーガーメニューを常に表示★
+					if(is_active_sidebar( 'nav_drawer' )): ?>
 					<div id="drawer">
 						<!--ナビドロワーのボタン-->
 						<input type="checkbox" id="drawer__input" class="drawer--unshown" >
 						<label id="drawer__open" for="drawer__input"><i class="fa fa-bars"></i></label>
 						<label class="drawer--unshown" id="drawer__close-cover" for="drawer__input"></label>
-						<!--ナビドロワーの内容-->
 						<div id="drawer__content">
-							<div class="drawer__title dfont">MENU<label class="close" for="drawer__input"><span></span></label></div>
+							<div class="drawer__title dfont">
+								<span class="main-c">HACK HACK</span>
+								<label class="close" for="drawer__input"><span></span></label>
+								<div class="widget widget_search">
+									<?php get_search_form(); ?>
+								</div>
+							</div>
 							<?php dynamic_sidebar('nav_drawer'); ?>
 						</div>
 					</div>
@@ -41,7 +39,7 @@
 				<div id="inner-header" class="wrap cf">
 					<?php //ロゴまわり
 						  //トップページのみタイトルをh1に
-						$title_tag = (is_home() || is_front_page()) ? 'h1' : 'p'; ?>
+						$title_tag = (is_home()) ? 'h1' : 'p'; ?>
 					<<?php echo $title_tag;?> id="logo" class="h1 dfont">
 						<a href="<?php echo home_url(); ?>"><?php $logo = esc_url(get_option('logo_image_upload'));
 							if($logo){ ?><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>"><?php } if(!get_option('onlylogo_checkbox')) bloginfo('name'); ?></a>

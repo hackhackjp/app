@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/*
+ Theme Name: SANGO Child Guide Design
+ Theme URI: https://saruwakakun.com/sango
+ Author: SARUWAKA
+ Author URI: https://saruwakakun.com
+ Template: sango-theme
+*/
+
+/******************カスタマイズガイド風に******************/
+
+/******************
+ ロゴ画像のサイズ調整
+ ******************/
+#logo img {
+    padding: 15px 0;}
+@media only screen and (min-width: 768px) {
+h1 {font-size: 1.7em;}
+#logo, #logo img, .desktop-nav li a {
+    height: 40px;
+    line-height: 40px;
+    }
+}/*END 768px*/
+
+/******************
+引用内の箇条書きを調整
+ ******************/
+.entry-content blockquote ul, .entry-content blockquote ol {
+    border: none;
+    padding: 5px 0 5px 20px;
+    margin: 0;
+}
+/******************
+コメント設定
+ ******************/
+#comments-title {
+    margin-top: 3em;
+    background: #6bb6ff;
+    color: #FFF;
+}
+
+/******************
+ ナビドロワーの中身の設定
+ ******************/
+
+ /*バツじるしを白に*/
+.drawer__title .close span ,.drawer__title .close span:before{
+    background: #FFF;
+}
+ /*画像まわりの余白を消す*/
+#drawer__content .drawer__title {
+    padding: 0;
+    background: #d6edff;
+    padding: 10px 0;
+}
+.drawer__title a {
+    color: #6bb6ff;
+    text-decoration: none;
+}
+
+
+/*「カスタマイズガイド」の文字と画像*/
+.drawer__title img {
+    padding: 0 1em;
+}
+.drawer__title + .widget h4 {
+    margin-top: 0;
+}
+
+/*検索フォーム*/
+#drawer__content input#s {
+    background: #ffffff;
+}
+#searchsubmit ,#drawer__content input#s{
+    border:none;
+    height: 40px;
+}
+/*ウィジェットメニュー*/
+.widget-menu {
+    border-bottom: solid 2px #EFEFEF;
+}
+#drawer__content .widget ul li a {
+    padding: 7px 15px;
+}
+#drawer__content .widget ul li a .fa {
+   color: #bbbfc7
+}
+#drawer__content .current-menu-item a ,#drawer__content .current-menu-item a .fa {
+    background: #f2f2f2;
+    color: #6bb6ff!important;
+}
+
+/*カテゴリと記事一覧*/
+.table_of_contents {
+    margin: 15px 0;
+}
+.table_of_contents li {
+    font-weight: bold;
+}
+.table_of_contents li a {
+    color: #54626f;
+    display: block;
+    padding: 8px 15px;
+}
+.table_of_contents li a:hover{
+    text-decoration: none;
+    background: #efefef;
+}
+.table_of_contents li a .fa{
+color: #c3cdde;
+}
+.table_of_contents ul {
+    margin: 0;
+    display: none;
+}
+.table_of_contents ul li a {
+    font-size: 0.83em;
+    padding: 11px 12px 11px 40px;
+    line-height: 1.4;
+    position: relative;
+}
+.table_of_contents ul li a:before {
+    content: '\f105';
+    font-family: FontAwesome;
+    left: 26px;
+    color: #c3cdde;
+    position: absolute;
+}
+
+
+/*パンくず*/
+#breadcrumb {
+    background: #f1f8ff;
+}
+
+/*フッターメニュー*/
+#footer-menu .footer-links li a {
+    margin: .5em 0;
+    padding: .6em 1.3em;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.2), 0 2px 3px -2px rgba(0,0,0,.15);
+    color: #66666c;
+    text-decoration: none;
+    font-weight: bold;
+    vertical-align: middle;
+    transition: .3s ease-in-out;
+    background: rgb(202, 231, 255);
+}
+#footer-menu .footer-links li a:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,.25);
+}
+
+/******************
+ ナビドロワーの設定
+ 1030px以上の場合、常に表示
+ ******************/
+@media (min-width: 768px) {
+/*ナビを1030pxまで表示*/
+#drawer__open {
+    display: block;
+    line-height: 54px;
+}
+
+/*サイドバーのスペースを無くす*/
+.t-2of3 {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+    }
+
+/*記事一覧のカードのサイズを調整*/
+.cardtype__article {
+    width: 45%;
+    margin: 25px 3.5% 25px 2%;
+}
+.cardtype__article:nth-child(even){
+    margin-right: 2%;
+}
+.cardtype {
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+/*1カラムの幅を調整*/
+.single #main ,.page #main {
+    max-width: 800px;
+}
+
+/*アーカイブページのヘッダ幅を調節*/
+#archive_header {
+    margin: 0 auto 1.5em;
+    max-width: 685px;
+}
+/**/
+.home_bottom, .home_top {
+    max-width: 700px;
+    margin: 1em auto;
+}
+
+/*検索結果を調整*/
+.search #inner-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.notfound {
+    margin-right: 0;
+}
+
+/*前の記事・次の記事のカード*/
+.prnx_tb {
+    box-shadow: none;
+    border: solid 2px #eaedf2;
+}
+
+/*コメント設定*/
+#comments-title,.commentlist {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.comment-respond {border-top: none;}
+
+}
+
+@media only screen and (min-width: 1030px) {
+/*ナビを1030px〜非表示*/
+#drawer__open {
+    display: none;
+}
+
+/*ヘッダーに余計なアニメーションをつけない*/
+.home .header,.header{
+    animation: none;
+    box-shadow: none;
+    }
+
+/*メニューの中身を常に表示*/
+#drawer__content{
+    transform: translateX(0%);
+    width: 300px;
+    left: 0;
+    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/*バツボタンと開くボタンを消す*/
+.drawer__title .close,#drawer__open {
+    display: none;
+}
+
+/*メニュー分のスペースを空ける*/
+#container {
+    padding-left: 300px;
+}
+
+/*サイドバー分のスペースを消す*/
+.wrap {
+    width: auto;
+}
+
+/*コメント設定*/
+#comments-title,.commentlist {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+}

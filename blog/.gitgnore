@@ -1,0 +1,16 @@
+# MacOS
+.DS_Store
+
+# WordPress
+wp-content/uploads
+wp-content/cache
+wp-content/plugins
+
+# composer 関連ファイル
+composer.lock
+/vendor/
+
+# ドメイン変更用移行ツール
+# https://interconnectit.com/products/search-and-replace-for-wordpress-databases/
+searchreplacedb2.php
+searchreplacedb/
