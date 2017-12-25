@@ -2,9 +2,9 @@
 .DS_Store
 
 # WordPress
-wp-content/uploads
-wp-content/cache
-wp-content/plugins
+# wp-content/uploads
+blog/wp-content/cache
+blog/wp-content/plugins
 
 # composer 関連ファイル
 composer.lock
