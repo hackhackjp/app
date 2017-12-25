@@ -22,6 +22,9 @@
 		</script>
 	</head>
 	<body <?php body_class(); ?>>
+		<div id="header_bnr">
+			<img src="/blog/wp-content/bnr/header_bnr.png">
+		</div>
 		<div id="container">
 			<header class="header<?php if(get_option('center_logo_checkbox')) echo ' header--center'; ?>">
 				<?php //ハンバーガーメニュー
