@@ -1,7 +1,4 @@
 <section class="entry-content cf">
-  <?php if (function_exists("pagination")) {
-    pagination($additional_loop->max_num_pages);
-} ?>
   <?php
     $show_ads = (get_post_meta( $post->ID, 'disable_ads', true )) ? null : "1";
   	//タイトル下広告（ウィジェットで設定）

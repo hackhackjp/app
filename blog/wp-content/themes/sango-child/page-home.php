@@ -14,15 +14,31 @@
 
           <section class="entry-content cf">
             <?php
-              the_content();
-              wp_link_pages( array(
-                'before'      => '<div class="page-links dfont">',
-                'after'       => '</div>',
-                'link_before' => '<span>',
-                'link_after'  => '</span>',
-              ) );
-              ?>
-            </section>
+              $args = array(
+                'posts_per_page' => 20 // 表示件数の指定
+              );
+              $posts = get_posts( $args );
+              foreach ( $posts as $post ): // ループの開始
+                setup_postdata( $post ); // 記事データの取得
+            ?>
+            <hr />
+            <div>
+              <div style="float:left; width:40%;">
+                <?php the_post_thumbnail(array(200,100)); ?>
+              </div>
+              <div style="float:right; width:60%;">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <?php the_category(' | '); ?>&nbsp;<?php the_time('Y/m/d'); ?>
+            </div>
+
+<?php
+endforeach; // ループの終了
+wp_reset_postdata(); // 直前のクエリを復元する
+?>
+          </section>
 
             <footer class="article-footer">
               <aside>
