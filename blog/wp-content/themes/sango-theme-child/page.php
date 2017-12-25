@@ -9,11 +9,8 @@
 			       <article id="entry" <?php post_class('cf'); ?>>
 			            <header class="article-header entry-header">
 							<?php breadcrumb(); //ぱんくず?>
-			                <h1 class="page-title"><?php the_title(); //タイトル ?></h1>  
+			                <h1 class="page-title"><?php the_title(); //タイトル ?></h1>
 			                <?php if (has_post_thumbnail()): //アイキャッチ?>
-				                <p class="post-thumbnail">
-				                	<?php the_post_thumbnail('large');?>
-								</p>
 				       		 <?php endif; ?>
 			            </header>
 
@@ -39,7 +36,7 @@
 			             </footer>
 
 						<?php insert_json_ld();//構造化データ ?>
-			        </article>		
+			        </article>
 				<?php endwhile; ?>
 				<?php else : ?>
 					<?php get_template_part('content', 'not-found'); ?>
