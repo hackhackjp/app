@@ -10,9 +10,6 @@
   	//記事の中身
     the_content();
     //分割ページのページネイション
-    if (function_exists('responsive_pagination')) {
-      responsive_pagination($additional_loop->max_num_pages);
-    }
     wp_link_pages( array(
       'before'      => '<div class="page-links dfont">',
       'after'       => '</div>',
