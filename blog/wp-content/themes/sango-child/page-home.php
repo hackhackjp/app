@@ -12,6 +12,8 @@
             <?php endif; ?>
           </header>
 
+          <!-- 最新の投稿20件 -->
+
           <section class="entry-content cf">
 
             <?php
