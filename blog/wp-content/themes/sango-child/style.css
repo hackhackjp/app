@@ -6,30 +6,3 @@ Template:       sango-theme
 
 (optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
 */
-
-
-
-/*--------------------------------------
-  スマホヘッダーメニュー固定
---------------------------------------*/
-
-@media only screen and (max-width: 767px) {
-
-.header {
-  position: fixed;/*ヘッダー固定*/
-  top: 0;
-  left: 0;
-  width:100%;
-}
-
-/*ヘッダーの高さだけコンテンツを下げる*/
-#container{
-  padding-top:100px;/*ヘッダーの高さにあわせて調整*/
-}
-
-/*目次から見出しへ飛ぶリンクのズレを修正*/
-h2 span, h3 span {
-  padding-top: 100px;/*ヘッダーの高さにあわせて調整*/
-  margin-top: -100px;/*ヘッダーの高さにあわせて調整（マイナスは消さない）*/
-}
-}
